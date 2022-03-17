@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newdigate.ExpressionMapper", "src\Newdigate.ExpressionMapper\Newdigate.ExpressionMapper.csproj", "{D672FB20-2638-4497-B699-45D74DCDC79D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newdigate.ExpressionMapper.Tests", "tests\Newdigate.ExpressionMapper.Tests\Newdigate.ExpressionMapper.Tests.csproj", "{DD2A01CF-A974-4CFC-B7F8-BD90D64AAF1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D672FB20-2638-4497-B699-45D74DCDC79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D672FB20-2638-4497-B699-45D74DCDC79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D672FB20-2638-4497-B699-45D74DCDC79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D672FB20-2638-4497-B699-45D74DCDC79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD2A01CF-A974-4CFC-B7F8-BD90D64AAF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2A01CF-A974-4CFC-B7F8-BD90D64AAF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2A01CF-A974-4CFC-B7F8-BD90D64AAF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2A01CF-A974-4CFC-B7F8-BD90D64AAF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E55B4986-EC63-4941-9BD5-694C954F8898}
+	EndGlobalSection
+EndGlobal
