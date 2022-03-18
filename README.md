@@ -1,5 +1,5 @@
 # ExpressionMapper
-* a C# expression translator for database and service layer expressions
+* a C# expression translator for expressions between database/service/controller layers
 * this is a work-in-progress, please feel free to contribute.
 
 ## why ?
@@ -11,10 +11,9 @@ A service class depending on data query/command/subscription providers shouldnt 
 [Route("[controller]")]
 public class RecordTypeController : ControllerBase
 {
-    private readonly ILogger<RecordTypeController> _logger;
     private readonly IUniqueKeyQueryProvider<RecordType,string> _queryByUniqueKeyProvider;
+    
     public RecordTypeController(
-        ILogger<RecordTypeController> logger, 
         IUniqueKeyQueryProvider<RecordType, string> queryByUniqueKeyProvider)
     {
         _logger = logger;
