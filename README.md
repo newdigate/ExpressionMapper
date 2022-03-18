@@ -1,6 +1,12 @@
 # ExpressionMapper
-c# expression translation between database and service layers
+* a C# expression translator for database and service layer expressions
+* this is a work-in-progress, please feel free to contribute.
 
+## why ?
+this allows services to be agnostic to data types. A bit like AutoMapper but specifically for predicate expressions.
+A service class depending on data query/command/subscription providers shouldnt need to be coupled to any platform specific data-types.
+
+## TL/DR
 * given a predicate expression for a service class named ```StudentRow```:
 ``` c#
 Expression<Func<StudentRecord, bool>>    
