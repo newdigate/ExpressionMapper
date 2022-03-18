@@ -6,6 +6,32 @@
 this allows services to be agnostic to data types. A bit like AutoMapper but specifically for predicate expressions.
 A service class depending on data query/command/subscription providers shouldnt need to be coupled to any platform specific data-types.
 
+``` c#
+[ApiController]
+[Route("[controller]")]
+public class RecordTypeController : ControllerBase
+{
+    private readonly ILogger<RecordTypeController> _logger;
+    private readonly IUniqueKeyQueryProvider<RecordType,string> _queryByUniqueKeyProvider;
+    public RecordTypeController(
+        ILogger<RecordTypeController> logger, 
+        IUniqueKeyQueryProvider<RecordType, string> queryByUniqueKeyProvider)
+    {
+        _logger = logger;
+        _queryByUniqueKeyProvider = queryByUniqueKeyProvider;
+    }
+
+    [HttpGet(Name = "GetRecordType")]
+    public RecordType? GetRecordType()
+    {
+        RecordType? result = _queryByUniqueKeyProvider.Get("6224ff2fdc13b1955a4c2db8");
+        return result;
+    }
+}
+
+```
+
+
 ## TL/DR
 * given a predicate expression for a service class named ```StudentRow```:
 ``` c#
