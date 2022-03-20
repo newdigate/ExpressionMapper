@@ -11,6 +11,8 @@
 this allows services to be agnostic to data types. A bit like AutoMapper but specifically for predicate expressions.
 A service class depending on data query/command/subscription providers shouldnt need to be coupled to any platform specific data-types.
 
+for instance, the controller defined below does not need to be coupled to a specific entity, just a RecordType service entity class and can therefor be agnostic to database implementation
+
 ``` c#
 [ApiController]
 [Route("[controller]")]
