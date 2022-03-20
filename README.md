@@ -2,6 +2,11 @@
 * a C# expression translator for expressions between database/service/controller layers
 * this is a work-in-progress, please feel free to contribute.
 
+## install
+``` sh
+> dotnet add package Newdigate.ExpressionMapper
+```
+
 ## why ?
 this allows services to be agnostic to data types. A bit like AutoMapper but specifically for predicate expressions.
 A service class depending on data query/command/subscription providers shouldnt need to be coupled to any platform specific data-types.
@@ -13,10 +18,8 @@ public class RecordTypeController : ControllerBase
 {
     private readonly IUniqueKeyQueryProvider<RecordType,string> _queryByUniqueKeyProvider;
     
-    public RecordTypeController(
-        IUniqueKeyQueryProvider<RecordType, string> queryByUniqueKeyProvider)
+    public RecordTypeController(IUniqueKeyQueryProvider<RecordType, string> queryByUniqueKeyProvider)
     {
-        _logger = logger;
         _queryByUniqueKeyProvider = queryByUniqueKeyProvider;
     }
 
@@ -27,7 +30,6 @@ public class RecordTypeController : ControllerBase
         return result;
     }
 }
-
 ```
 
 
